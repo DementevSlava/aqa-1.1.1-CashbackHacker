@@ -1,11 +1,13 @@
 package ru.netology.service;
 
+import org.junit.Test;
+
 import static org.junit.Assert.assertEquals;
 
 public class CashbackHackServiceTest {
     CashbackHackService cashbackHackService = new CashbackHackService();
 
-    @org.junit.Test
+    @Test
     public void Rerutn1000IfAmountIsZero() {
         int amount = 0;
 
@@ -15,7 +17,7 @@ public class CashbackHackServiceTest {
         assertEquals(actual, expected);
     }
 
-    @org.junit.Test
+    @Test
     public void buyUpTo1000() {
         int amount = 700;
 
@@ -25,7 +27,7 @@ public class CashbackHackServiceTest {
         assertEquals(actual, expected);
     }
 
-    @org.junit.Test
+    @Test
     public void buyOnTheBoundary() {
         int amount = 999;
 
@@ -35,7 +37,7 @@ public class CashbackHackServiceTest {
         assertEquals(actual, expected);
     }
 
-    @org.junit.Test
+    @Test
     public void buyTo1000() {
         int amount = 1000;
 
@@ -45,7 +47,7 @@ public class CashbackHackServiceTest {
         assertEquals(actual, expected);
     }
 
-    @org.junit.Test
+    @Test
     public void buyAfterTheBoundary() {
         int amount = 1001;
 
@@ -55,7 +57,7 @@ public class CashbackHackServiceTest {
         assertEquals(actual, expected);
     }
 
-    @org.junit.Test
+    @Test
     public void NegativeAmount() {
         int amount = -1;
 
